@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColetaDeReciclaveis.Views.JobScreen"
+             Title="Adicionar Pedido">
+    
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="White">
+
+            <Grid VerticalOptions="FillAndExpand" Padding="25,10,25,10" RowSpacing="50">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Button x:Name="BtnAlbum" Clicked="BtnAlbum_Clicked" Text="Album"  TextColor="Black" Grid.Row="0" Grid.Column="2" VerticalOptions="End" 
+                        HorizontalOptions="Fill"  BorderColor="CornflowerBlue" BorderWidth="4" CornerRadius="15" BackgroundColor="AliceBlue"/>
+
+                <Button x:Name="BtnTirarFoto" Clicked="BtnTirarFoto_Clicked" Text="Tirar Foto"  TextColor="Black" Grid.Row="1" Grid.Column="2" VerticalOptions="Start" 
+                        HorizontalOptions="Fill"  BorderColor="CornflowerBlue" BorderWidth="4" CornerRadius="15" BackgroundColor="AliceBlue"/>
+
+                <Label Text="Título: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="TitleEntry" Placeholder="Título" Keyboard="Default" FontSize="15" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                <Label Text="Descrição: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="3" Grid.Column="0"/>
+                <Editor x:Name="DescritionServiceEntry" Placeholder="Descrição" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Center" FontSize="15" 
+                        AutoSize="TextChanges" />
+
+                <Image x:Name="ImgMaterial" Source="cameraIcon" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" HeightRequest="150" WidthRequest="150" VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+
+                <Button x:Name="BtnAddService" Clicked="BtnAddService_Clicked" Text="Adicionar" FontSize="15" TextColor="Black" FontAttributes="Bold" BackgroundColor="White" BorderColor="LimeGreen" 
+                            BorderWidth="4" CornerRadius="10" Grid.Row="4" Grid.ColumnSpan="3"/>
+
+            </Grid>
+
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ColetaDeReciclaveis.Views.Login">
+	<ContentPage.Content>
+		<StackLayout x:Name="Content" BackgroundColor="White">
+			<Grid ColumnSpacing="5" RowSpacing="20" Padding="60,80,60,20">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*" />
+					<RowDefinition Height="20" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+
+				<Label Grid.Row="0" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" FontSize="30" FontAttributes="Bold" Text="Login"/>
+
+				<Label Grid.Row="2" Grid.Column="0" TextColor="black" Text="Usuário" VerticalOptions="Center" />
+				<Entry Grid.Row="2" Grid.Column="1" x:Name="EntryLogin" Placeholder="Digite o nome de usuário." FontSize="Medium" />
+
+				<Label Grid.Row="3" Grid.Column="0" TextColor="black" Text="Senha" VerticalOptions="Center" />
+				<Entry Grid.Row="3" Grid.Column="1" x:Name="EntryPassword" IsPassword="True" Placeholder="Digite a senha." FontSize="Medium"/>
+
+				<Button Grid.Row="4" Grid.ColumnSpan="2" FontSize="20"  BackgroundColor="Teal" Clicked="ButtonClicked_Login" FontAttributes="Bold" HeightRequest="60" TextColor="white" Text="Entrar"/>
+				<Button Grid.Row="5" Grid.ColumnSpan="2" TextColor="Teal" Clicked="ButtonCliclekd_NewUser" BackgroundColor="Transparent" Text="Não possui uma conta?" FontSize="Small"/>
+
+			</Grid>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColetaDeReciclaveis.Views.EcoPointScreen"
+             Title="Adicionar EcoPonto"
+			 xmlns:lv="clr-namespace:Xamarin.Forms.MultiSelectListView;assembly=Xamarin.Forms.MultiSelectListView" Padding="0,20,0,0">
+
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand">
+                <Grid VerticalOptions="FillAndExpand" Padding="20" RowSpacing="20" ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+					<Label Text="EcoPonto" TextColor="Blue" FontSize="25" Grid.Row="0" Grid.ColumnSpan="3"
+                       VerticalOptions="Center" HorizontalOptions="Center"/>
+
+					<Label Text="Nome: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="NameEcoPontoEntry" Placeholder="Nome do Estabelecimento"  Keyboard="Default" FontSize="15"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <Label Text="Descrição: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="3" Grid.Column="0"/>
+                    <Entry x:Name="DescritionEcoPontoEntry" Placeholder="Informações Adicionais"  Keyboard="Default" FontSize="15" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <Label Text="Endereço: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="6" Grid.Column="0"/>
+                    <Entry x:Name="CepEcoPontoEntry" Keyboard="Numeric" Placeholder="CEP" FontSize="15" Grid.Row="6" Grid.Column="1" />
+                    <Entry x:Name="RuaEcoPontoEntry" Placeholder="Rua" FontSize="15" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="NumberEcoPontoEntry" Keyboard="Numeric" Placeholder="Numero" FontSize="15" Grid.Row="7" Grid.Column="2"/>
+                    <Entry x:Name="BairroEcoPontoEntry" Placeholder="Bairro" FontSize="15" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="ComplementEcoPontoEntry" Placeholder="Complemento" FontSize="15" Grid.Row="8" Grid.Column="2"/>
+                    <Entry x:Name="CityEcoPontoEntry" Placeholder="Cidade" FontSize="15" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="StateEcoPontoEntry" Placeholder="Estado" FontSize="15" Grid.Row="9" Grid.Column="2"/>
+
+
+                    <Label Text="Telefone: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="4" Grid.Column="0"/>
+                    <Entry x:Name="PhoneEcoPontoEntry" Placeholder="Número de Contato" Keyboard="Numeric" FontSize="15" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+					<StackLayout  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="100">
+						<Label Text="Materiais: " TextColor="Black" VerticalOptions="Center" FontSize="15"/>
+						<ListView x:Name="lvwMaterials" 
+							HasUnevenRows="true"
+							SeparatorVisibility="Default" 
+							ItemsSource="{Binding Materials}"
+								  lv:MultiSelect.Enable="true">
+							<ListView.ItemTemplate>
+								<DataTemplate>
+									<lv:SelectableCell x:Name="SelectableCell">
+
+										<lv:SelectableCell.CheckView>
+											<Image Source="select.png" WidthRequest="30" HeightRequest="30"></Image>
+										</lv:SelectableCell.CheckView>
+
+										<lv:SelectableCell.DataView>
+											<StackLayout Orientation="Vertical" Padding="20,0,20,0">
+												<Label Text="{Binding Name}" FontSize="17"  TextColor="black"></Label>
+											</StackLayout>
+										</lv:SelectableCell.DataView>
+
+									</lv:SelectableCell>
+
+								</DataTemplate>
+							</ListView.ItemTemplate>
+
+						</ListView>
+					</StackLayout>
+					
+					<Button x:Name="BtnAddEcoPonto" Clicked="BtnAddEcoPonto_Clicked" Text="Adicionar" FontSize="15" TextColor="Black" FontAttributes="Bold" BackgroundColor="White" BorderColor="LimeGreen" 
+                            BorderWidth="4" CornerRadius="10" Grid.Row="10" Grid.ColumnSpan="3"/>
+
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

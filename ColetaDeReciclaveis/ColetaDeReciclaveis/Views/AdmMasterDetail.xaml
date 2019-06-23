@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColetaDeReciclaveis.Views.AdmMasterDetail">
+
+    <MasterDetailPage.Master>
+        <ContentPage BackgroundColor="#00243C" Title="Menu">
+            <StackLayout Orientation="Vertical">
+
+ 
+                <StackLayout BackgroundColor="#01D789" HeightRequest="80">
+                    <Label Text="Coleta de Recicláveis" FontAttributes="Bold" FontSize="22"
+                     VerticalOptions="CenterAndExpand"
+                     TextColor="White"
+                     HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <ListView x:Name="navigationApp" RowHeight="50"
+                    SeparatorVisibility="Default" SeparatorColor="White" BackgroundColor="#00243C" ItemSelected="MenuItemSelected">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout  VerticalOptions="FillAndExpand"  BackgroundColor="#00243C"
+                                   Orientation="Horizontal"
+                                   Padding="20,10,0,10" Spacing="20">
+
+                                    <Image Source="{Binding Icon}" HeightRequest="40" WidthRequest="40"
+                                           VerticalOptions="Center"/>
+
+                                    <Label Text="{Binding Title}" FontSize="Medium" VerticalOptions="Center"
+                                           TextColor="White" FontAttributes="Bold"/>
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+                <StackLayout BackgroundColor="#01D789" x:Name="AdminSpace" HeightRequest="40">
+                    <Label Text="Administração" FontAttributes="Bold" FontSize="18"
+                     VerticalOptions="CenterAndExpand"
+                     TextColor="White"
+                     HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <ListView x:Name="navigationList" RowHeight="50"
+                  SeparatorVisibility="Default" SeparatorColor="White" BackgroundColor="#00243C"
+                  ItemSelected="MenuItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout VerticalOptions="FillAndExpand"  BackgroundColor="#00243C"
+                                   Orientation="Horizontal"
+                                   Padding="20,10,0,10" Spacing="20">
+
+                                    <Image Source="{Binding Icon}"
+                                           HeightRequest="40" WidthRequest="40"
+                                           VerticalOptions="Center"/>
+
+                                    <Label Text="{Binding Title}"
+                                       FontSize="Medium"
+                                       VerticalOptions="Center"
+                                       TextColor="White" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+				<StackLayout BackgroundColor="#01D789">
+					<Button Clicked="Logout" FontAttributes="Bold" FontSize="18"
+                     VerticalOptions="CenterAndExpand"
+                     TextColor="White"
+                     HorizontalOptions="Center" Text="Logout" BackgroundColor="Transparent"/>
+				</StackLayout>
+
+				<StackLayout BackgroundColor="Teal">
+					<Button Clicked="CallAboutPage" FontAttributes="Bold" FontSize="18"
+                     VerticalOptions="CenterAndExpand"
+                     TextColor="White"
+                     HorizontalOptions="Center" Text="Sobre" BackgroundColor="Transparent"/>
+				</StackLayout>
+
+			</StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+		<ContentPage/>
+	</MasterDetailPage.Detail>
+</MasterDetailPage>

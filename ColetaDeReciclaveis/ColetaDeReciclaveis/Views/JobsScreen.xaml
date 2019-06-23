@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColetaDeReciclaveis.Views.JobsScreen">
+
+    <StackLayout Orientation="Vertical" BackgroundColor="white" VerticalOptions="FillAndExpand" Padding="10,15,10,15">
+
+        <ScrollView>
+            <ListView x:Name="anuncios" BackgroundColor="White" RowHeight="200" SeparatorVisibility="Default" SeparatorColor="Black" ItemsSource="{Binding Jobs}" >
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell>
+                            <ScrollView>
+                                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20,10,20,10" >
+                                    <Grid ColumnSpacing="20">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="{Binding Title}" TextColor="Black" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center"
+                                        Grid.Row="0" Grid.Column="0"/>
+										<Label Text="{Binding Phone}" TextColor="Black" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center"
+                                        Grid.Row="0" Grid.Column="1"/>
+
+										<Image Source="{Binding image}" HeightRequest="120" WidthRequest="120"
+                                       HorizontalOptions="Start" Grid.Row="1" Grid.Column="0"/>
+
+                                        <Label Text="{Binding Description}" TextColor="Black" FontSize="18" HorizontalTextAlignment="Start"
+                                        HorizontalOptions="Start" Grid.Row="1" Grid.Column="1"/>
+
+
+                                    </Grid>
+
+
+
+                                </StackLayout>
+                            </ScrollView>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+        </ScrollView>
+
+    </StackLayout>
+
+</ContentPage>

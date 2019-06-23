@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="ColetaDeReciclaveis.Views.UserScreen">
+    
+    <ContentPage.Content>
+
+        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+            <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" x:Name="Content">
+                <Grid VerticalOptions="FillAndExpand" Padding="20" RowSpacing="20" ColumnSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Usuário" TextColor="Blue" FontSize="25" Grid.Row="0" Grid.ColumnSpan="3"
+                       VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                    <Label Text="Nome: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="FullNameEntry" Placeholder="Digite o seu Nome" Keyboard="Default" FontSize="15" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <Label Text="CPF: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="CpfEntry" Placeholder="Digite o CPF" Keyboard="Numeric" FontSize="15"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <Label Text="E-Mail: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="3" Grid.Column="0"/>
+                    <Entry x:Name="EmailEntry" Placeholder="Digite o seu E-mail" Keyboard="Default" FontSize="15" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <Label Text="Sobre: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="4" Grid.Column="0"/>
+                    <Entry x:Name="AboutEntry" Placeholder="Informações Adicionais" Keyboard="Default" FontSize="15" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <Label Text="Data de Nascimento: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="5" Grid.Column="0"/>
+					<DatePicker x:Name="BirthdayEntry" MinimumDate="01/01/1950" MaximumDate="03/06/2019" Date="04/06/2019" FontSize="15" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" />
+
+					<Label Text="Nome de usuário: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="6" Grid.Column="0"/>
+					<Entry x:Name="UsernameEntry" Placeholder="Digite seu nome de usuário" Keyboard="Default" FontSize="15" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+					<Label Text="Senha: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="7" Grid.Column="0"/>
+                    <Entry x:Name="PasswordEntry" IsPassword="True" Placeholder="Nova Senha" Keyboard="Default" FontSize="15" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <Label Text="Conf. Senha: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="8" Grid.Column="0"/>
+                    <Entry x:Name="ConfPasswordEntry" IsPassword="True" Placeholder="Confirmar Senha" Keyboard="Default" FontSize="15" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <Label Text="Telefone: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="9" Grid.Column="0"/>
+                    <Entry x:Name="PhoneEntry" Placeholder="Número de Contato" Keyboard="Numeric" FontSize="15" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <Label Text="Endereço: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="10" Grid.Column="0"/>
+                    <Entry Placeholder="CEP" x:Name="CepEntry" FontSize="15" Grid.Row="10" Grid.Column="1" Keyboard="Numeric" />
+                    <Entry Placeholder="Rua" x:Name="RuaEntry" FontSize="15" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="Numero" x:Name="NumberEntry" FontSize="15" Grid.Row="11" Grid.Column="2" Keyboard="Numeric" />
+                    <Entry Placeholder="Bairro" x:Name="BairroEntry" FontSize="15" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2" />
+                    <Entry Placeholder="Complemento" x:Name="ComplementEntry" FontSize="15" Grid.Row="12" Grid.Column="2"/>
+                    <Entry Placeholder="Cidade" x:Name="CityEntry" FontSize="15" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="Estado" x:Name="StateEntry" FontSize="15" Grid.Row="13" Grid.Column="2"/>
+
+                    <Label Text="Tipo de usuário:" TextColor="Blue" FontSize="20" Grid.Row="14" Grid.ColumnSpan="3"
+                       VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                    <controls:CheckBox Grid.Row="15" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start"
+                                      DefaultText="Coletor" FontSize="15" x:Name="ColetorCheckbox" />
+
+                    <controls:CheckBox Grid.Row="16" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start"
+                                      DefaultText="Doador" FontSize="15" x:Name="DoadorCheckbox"/>
+
+                    <controls:CheckBox Grid.Row="15" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Start"
+                                      DefaultText="APP Admin" FontSize="15" x:Name="AppAdmCheckbox" IsVisible="False"/>
+
+                    <controls:CheckBox Grid.Row="16" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Start"
+                                      DefaultText="DBA Admin" FontSize="15" x:Name="DbaAdminCheckbox" IsVisible="False"/>
+
+                    <Button x:Name="BtnAdicionarUser" Clicked="BtnAdicionarUser_Clicked" Text="Adicionar" FontSize="15" TextColor="Black" FontAttributes="Bold" BackgroundColor="White" BorderColor="LimeGreen" 
+                            BorderWidth="4" CornerRadius="10" Grid.Row="17" Grid.ColumnSpan="3"/>
+                    
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

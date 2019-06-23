@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColetaDeReciclaveis.Views.MaterialScreen"
+             Title="Adicionar Material">
+    
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand">
+                <Grid VerticalOptions="FillAndExpand" Padding="20" RowSpacing="30" ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+ 
+                    <Label Text="Material" TextColor="Blue" FontSize="25" Grid.Row="0" Grid.ColumnSpan="2"
+                       VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                    <Label Text="Nome: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="MaterialEntry" Placeholder="Digite o Nome do Material" Keyboard="Text" VerticalOptions="Center" FontSize="15" Grid.Row="1" Grid.Column="1"/>
+
+                    <Label Text="Descrição: " TextColor="Black" VerticalOptions="Center" FontSize="15" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="DescritionEntry" Placeholder="Insira uma Descrição" Keyboard="Text" VerticalOptions="Center" FontSize="15" Grid.Row="2" Grid.Column="1"/>
+
+                    <Button x:Name="BtnAddMaterial" Clicked="BtnAddMaterial_Clicked" Text="Adicionar" FontSize="15" TextColor="Black" FontAttributes="Bold" BackgroundColor="White" BorderColor="LimeGreen" 
+                            BorderWidth="4" CornerRadius="10" Grid.Row="3" Grid.ColumnSpan="2"/>
+ 
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

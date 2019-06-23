@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColetaDeReciclaveis.Views.MapScreen">
+    
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="White" >
+            <Grid RowSpacing="50" VerticalOptions="FillAndExpand" Padding="20,40,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Mapa de EcoPontos" TextColor="Black" FontSize="30" Grid.Row="0" FontAttributes="Bold"
+                       VerticalOptions="Start" HorizontalOptions="Center"/>
+                <StackLayout x:Name="MapRegion" VerticalOptions="FillAndExpand" Grid.Row="1"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

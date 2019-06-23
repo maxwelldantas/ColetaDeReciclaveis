@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColetaDeReciclaveis.Views.AboutScreen">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#A9E2F3" Padding="20,40,20,20">
+
+            <Grid VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+
+                </Grid.RowDefinitions>
+
+				<StackLayout Grid.Row="0">
+					<Label Text="         O Coleta de Recicláveis foi desenvolvido pensando na conservação do meio ambiente, promovendo o descarte corretamente de materiais e ou resíduos sólidos. Nessa perspectiva o Coleta de Recicláveis disponibiliza um guia a fim de encontar locais de reciclagem adequados para o descarte. Também é possivel adicionar solicitações de coletas de materiais com intuito de encontrar possíveis coletores interessados."
+                       TextColor="Black" 
+                       FontSize="15"/>
+				</StackLayout>
+				
+
+                <Label Text="COLETA DE RECICLÁVEIS" TextColor="Black" FontSize="20" FontAttributes="Bold" Grid.Row="1"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <Image Source="icon" Grid.Row="2"  HeightRequest="100"/>
+
+                <Label Text="Desenvolvedores:" TextColor="Black" FontSize="15" FontAttributes="Bold" Grid.Row="3"
+                       VerticalOptions="End" HorizontalOptions="Center"/>
+
+                <Label Text="Cássio Fernando de Souza Dantas" TextColor="Black" FontSize="15" FontAttributes="Bold" Grid.Row="4"
+                       VerticalOptions="End" HorizontalOptions="Center"/>
+                <Label Text="cassiofsdantas@outlook.com" TextColor="Black" FontSize="15" Grid.Row="5" HorizontalOptions="Center" FontAttributes="Italic"/>
+
+                <Label Text="Henrique Batista Silva" TextColor="Black" FontSize="15" FontAttributes="Bold" Grid.Row="6"
+                       VerticalOptions="Start" HorizontalOptions="Center"/>
+                <Label Text="henriquebs.udi@gmail.com" TextColor="Black" FontSize="15" Grid.Row="7" HorizontalOptions="Center" FontAttributes="Italic"/>
+
+                <Image Source="IconPUC" Grid.Row="8" HeightRequest="50"/>
+
+                <Label Text="Desenvolvido em Ambiente Acadêmico" TextColor="Black" Grid.Row="9"
+                       HorizontalOptions="Center" FontSize="10"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
